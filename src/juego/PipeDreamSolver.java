@@ -191,7 +191,6 @@ public class PipeDreamSolver{
 		if(progress){
 
 			window.changeMatrix(board.getMatrix());
-//			showWindow(board.getFil(), board.getCol(), board.getMatrix());
 		}
 		
 		NextPipe nextPipe = getNextPipe(board);
@@ -229,13 +228,13 @@ public class PipeDreamSolver{
 		
 		//Poda pathExist
 		
-				Set<String> set = new HashSet<String>();
-				set.add(board.getActual().y + "-" + board.getActual().x);
-				if(!pathExists(board.getMatrix(), board.getFil(), board.getCol(), nextPipe.getNext().y, nextPipe.getNext().x, set)){
-					return false;
-				}
-//		if(board.getMatrix()[nextPipe.getNext().y][nextPipe.getNext().x] != null)
-//			return false;
+//				Set<String> set = new HashSet<String>();
+//				set.add(board.getActual().y + "-" + board.getActual().x);
+//				if(!pathExists(board.getMatrix(), board.getFil(), board.getCol(), nextPipe.getNext().y, nextPipe.getNext().x, set)){
+//					return false;
+//				}
+		if(board.getMatrix()[nextPipe.getNext().y][nextPipe.getNext().x] != null)
+			return false;
 		
 		board.setPathLength(board.getPathLength() + 1);
 		boolean flag = false;
