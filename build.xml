@@ -1,0 +1,12 @@
+<project name="PipeDreamEDA" default="build">
+ <target name="compile" >
+ 	<javac srcdir="src" destdir="bin" /> 
+ </target>
+ <target name="build" depends="compile">
+	<jar destfile="TPE.jar" basedir="bin">
+ 		<manifest>
+ 			<attribute name="Main-Class" value="juego.Main"/>
+ 		</manifest>
+	</jar> 
+ </target>
+</project> 
