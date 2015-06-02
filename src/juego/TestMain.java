@@ -99,21 +99,6 @@ public class TestMain {
 								
 				
 
-//				if(sol == null)
-//					System.out.println("nada");
-//				else{
-//					for (int i = 0; i < b.getFil(); i++) {
-//						for (int j = 0; j < b.getCol(); j++) {
-//							if(sol.getMatrix()[i][j] == null){
-//								System.out.print(".\t");
-//							}
-//							else
-//								System.out.print(sol.getMatrix()[i][j] + "\t");
-//						}
-//						System.out.println();
-//					}
-//				}
-				
 				
 				if(sol == null){
 					ErrorWindow e= new ErrorWindow();

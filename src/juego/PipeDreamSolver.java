@@ -78,10 +78,12 @@ public class PipeDreamSolver{
 			
 			if(getRandomSolution(auxBoard)){
 				aux = getMaxLocal(auxBoard, time - (System.currentTimeMillis() - initialTime), progress, window, initialTime);
-				ret = ret.getPathlength() > aux.getPathlength() ? ret : aux;
+
+				if(ret.getPathlength() < aux.getPathlength()){
+					ret=aux;
+				}
 			}
 		}
-		long finalTime = System.currentTimeMillis();
 		if(ret.getPathlength() == 0){
 			if(progress){
 				window.dispose();
